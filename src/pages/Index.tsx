@@ -46,9 +46,8 @@ const Index = () => {
                   Split bills, not friendships
                 </Badge>
                 <h1 className="font-heading text-4xl font-bold tracking-tight lg:text-6xl">
-                  Money matters made{" "}
                   <span className="gradient-brand bg-clip-text text-transparent">
-                    simple
+                    Sirf chai pe charcha, hisaab pe nahi.
                   </span>
                 </h1>
                 <p className="text-xl text-muted-foreground max-w-lg">
