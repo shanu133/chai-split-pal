@@ -8,7 +8,7 @@
 
 @layer base {
   :root {
-    /* Brand Colors - Warm & Professional */
+    /* Brand Colors - ChaiPaani Palette */
     --background: 0 0% 100%;
     --foreground: 216 26% 17%;
     
@@ -20,17 +20,17 @@
     --popover: 0 0% 100%;
     --popover-foreground: 216 26% 17%;
     
-    /* ChaiPaani Primary - Sophisticated Teal */
-    --primary: 172 70% 30%;
+    /* ChaiPaani Primary - Chai Orange */
+    --primary: 22 82% 52%;
     --primary-foreground: 0 0% 100%;
-    --primary-light: 172 58% 45%;
-    --primary-dark: 172 82% 25%;
+    --primary-light: 22 75% 62%;
+    --primary-dark: 22 90% 42%;
     
-    /* ChaiPaani Secondary - Warm Amber */
-    --secondary: 43 96% 56%;
+    /* ChaiPaani Secondary - Paani Blue */
+    --secondary: 204 70% 53%;
     --secondary-foreground: 0 0% 100%;
-    --secondary-light: 43 86% 65%;
-    --secondary-dark: 43 100% 48%;
+    --secondary-light: 204 65% 63%;
+    --secondary-dark: 204 75% 43%;
     
     /* Success - Positive Balance */
     --success: 142 71% 45%;
@@ -45,17 +45,17 @@
     /* Neutral System */
     --muted: 210 40% 96%;
     --muted-foreground: 215 16% 47%;
-    --accent: 210 40% 96%;
-    --accent-foreground: 172 70% 30%;
+    --accent: 204 8% 76%;
+    --accent-foreground: 22 82% 52%;
     
     /* Destructive */
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
     
     /* Borders & Inputs */
-    --border: 214 32% 91%;
-    --input: 214 32% 91%;
-    --ring: 172 70% 30%;
+    --border: 204 8% 76%;
+    --input: 204 8% 76%;
+    --ring: 22 82% 52%;
     
     /* Design System Radius */
     --radius: 0.75rem;
@@ -129,8 +129,8 @@
     --sidebar-border: 240 3.7% 15.9%;
     --sidebar-ring: 217.2 91.2% 59.8%;
     /* Dark Mode Overrides (maintaining brand consistency) */
-    --primary: 172 58% 45%;
-    --secondary: 43 86% 65%;
+    --primary: 22 75% 62%;
+    --secondary: 204 65% 63%;
     --success: 142 69% 58%;
     --warning: 25 85% 65%;
   }

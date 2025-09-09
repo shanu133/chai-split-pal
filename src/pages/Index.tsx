@@ -131,60 +131,110 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Features Section */}
-      <section className="py-20 bg-muted/50">
+      {/* How It Works Section */}
+      <section className="py-20 bg-muted/30">
         <div className="container">
-          <div className="text-center space-y-4 mb-12">
+          <div className="text-center space-y-4 mb-16">
             <h2 className="font-heading text-3xl font-bold">
-              Why choose ChaiPaani?
+              How It Works
             </h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              Built for Indian users who value relationships as much as accurate calculations
+            <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
+              Splitting expenses has never been easier. Follow these simple steps to start tracking and splitting expenses with friends.
             </p>
           </div>
 
-          <div className="grid gap-8 md:grid-cols-3">
-            <Card className="text-center shadow-soft">
-              <CardHeader>
-                <div className="mx-auto gradient-brand w-12 h-12 rounded-full flex items-center justify-center mb-4">
-                  <IndianRupee className="h-6 w-6 text-white" />
+          <div className="grid gap-12 md:grid-cols-3 max-w-5xl mx-auto">
+            {[
+              {
+                step: '1',
+                title: 'Create or Join a Group',
+                description: 'Start a group for your roommates, trip, or event and invite friends.'
+              },
+              {
+                step: '2',
+                title: 'Add Expenses',
+                description: 'Record who paid and how the bill should be split amongst members.'
+              },
+              {
+                step: '3',
+                title: 'Settle Up',
+                description: 'View who owes what and log payments when debts are cleared.'
+              }
+            ].map((item, index) => (
+              <div key={index} className="text-center relative">
+                <div className="mx-auto w-16 h-16 rounded-full gradient-brand flex items-center justify-center mb-6 text-white text-2xl font-bold">
+                  {item.step}
                 </div>
-                <CardTitle>Indian Currency Native</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground">
-                  Built specifically for Indian Rupees with local payment methods and UPI integration
-                </p>
-              </CardContent>
-            </Card>
+                <h3 className="font-heading text-xl font-semibold mb-4">{item.title}</h3>
+                <p className="text-muted-foreground leading-relaxed">{item.description}</p>
+                {index < 2 && (
+                  <div className="hidden md:block absolute top-8 left-full w-full h-px bg-primary/20" style={{width: 'calc(100% - 2rem)'}} />
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
-            <Card className="text-center shadow-soft">
-              <CardHeader>
-                <div className="mx-auto gradient-warm w-12 h-12 rounded-full flex items-center justify-center mb-4">
-                  <Users className="h-6 w-6 text-white" />
-                </div>
-                <CardTitle>Group Harmony</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground">
-                  Keep friendships intact while managing group expenses transparently and fairly
-                </p>
-              </CardContent>
-            </Card>
+      {/* Features Section */}
+      <section className="py-20">
+        <div className="container">
+          <div className="text-center space-y-4 mb-16">
+            <h2 className="font-heading text-3xl font-bold">
+              Features
+            </h2>
+            <p className="text-muted-foreground max-w-2xl mx-auto text-lg">
+              Everything you need to split expenses. Our platform provides all the tools you need to handle shared expenses with ease.
+            </p>
+          </div>
 
-            <Card className="text-center shadow-soft">
-              <CardHeader>
-                <div className="mx-auto gradient-success w-12 h-12 rounded-full flex items-center justify-center mb-4">
-                  <Smartphone className="h-6 w-6 text-white" />
-                </div>
-                <CardTitle>Simple & Fast</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground">
-                  Add expenses in seconds. Real-time calculations keep everyone updated instantly
-                </p>
-              </CardContent>
-            </Card>
+          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto">
+            {[
+              {
+                icon: Users,
+                title: 'Group Expenses',
+                description: 'Create groups for roommates, trips, or events to keep expenses organized.'
+              },
+              {
+                icon: Shield,
+                title: 'Smart Settlements',
+                description: 'Our algorithm minimises the number of payments when settling up.'
+              },
+              {
+                icon: Star,
+                title: 'Expense Analytics',
+                description: 'Track spending patterns and discover insights about your shared costs.'
+              },
+              {
+                icon: Smartphone,
+                title: 'Payment Reminders',
+                description: 'Automated reminders for pending debts and insights on spending patterns.'
+              },
+              {
+                icon: IndianRupee,
+                title: 'Multiple Split Types',
+                description: 'Split equally, by percentage, or by exact amounts to fit any scenario.'
+              },
+              {
+                icon: ArrowRight,
+                title: 'Real‑time Updates',
+                description: 'See new expenses and repayments the moment your friends add them.'
+              }
+            ].map((feature, index) => (
+              <Card key={index} className="text-center shadow-soft hover:shadow-brand transition-all duration-300 border-0">
+                <CardHeader>
+                  <div className="mx-auto gradient-warm w-14 h-14 rounded-full flex items-center justify-center mb-4">
+                    <feature.icon className="h-7 w-7 text-white" />
+                  </div>
+                  <CardTitle className="text-lg">{feature.title}</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-muted-foreground leading-relaxed">
+                    {feature.description}
+                  </p>
+                </CardContent>
+              </Card>
+            ))}
           </div>
         </div>
       </section>
